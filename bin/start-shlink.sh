@@ -13,11 +13,9 @@ set -o pipefail
 set -u
 
 echo -n "-----> Installing RR... "
-php $1/vendor/bin/rr get --no-interaction --location $1/bin/ && chmod +x $1/bin/rr
-ls -la $1/bin
+php /app/vendor/bin/rr get --no-interaction --location /app/bin/ && chmod +x /app/bin/rr
 echo "done"
 
 echo "-----> Starting Shlink..."
-exec "$1/bin/rr" serve --port ${PORT:-8080} --host ${HOST:-0.0.0.0}
-
+exec "/app/bin/rr" serve --port ${PORT:-8080} --host ${HOST:-0.0.0.0}
 
