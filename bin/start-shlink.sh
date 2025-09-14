@@ -12,6 +12,11 @@ set -o pipefail
 # Fail on undeclared variables.
 set -u
 
+php -v
+php -i
+
+
+
 echo -n "-----> Installing RR... "
 php /app/vendor/bin/rr get --no-interaction --location /app/bin/ && chmod +x /app/bin/rr
 echo "done"
