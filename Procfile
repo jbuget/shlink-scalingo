@@ -1,0 +1,1 @@
+web: /app/bin/my_app
