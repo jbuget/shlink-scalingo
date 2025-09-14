@@ -4,6 +4,6 @@
         "spiral/roadrunner-cli": "^2.7"
     },
     "compile": [
-        "php ./vendor/bin/rr get --no-interaction --location bin/ && chmod +x bin/rr"
+        "echo compiling && php ./vendor/bin/rr get --no-interaction --location bin/ && chmod +x bin/rr"
     ]
 }

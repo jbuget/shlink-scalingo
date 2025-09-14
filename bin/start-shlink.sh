@@ -12,15 +12,5 @@ set -o pipefail
 # Fail on undeclared variables.
 set -u
 
-php -v
-php -i
-
-
-
-echo -n "-----> Installing RR... "
-php /app/vendor/bin/rr get --no-interaction --location /app/bin/ && chmod +x /app/bin/rr
-echo "done"
-
 echo "-----> Starting Shlink..."
-exec "/app/bin/rr" serve --port ${PORT:-8080} --host ${HOST:-0.0.0.0}
-
+exec "/app/bin/rr" serve -o ${HOST:-0.0.0.0}:${PORT:-8080}
