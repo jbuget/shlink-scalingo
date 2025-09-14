@@ -1,1 +1,1 @@
-web: /app/bin/start-shlink.sh
+web: bin/start-shlink.sh
