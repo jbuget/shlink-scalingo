@@ -1,9 +1,0 @@
-{
-    "require": {
-        "php": "^8.4",
-        "spiral/roadrunner-cli": "^2.7"
-    },
-    "compile": [
-        "echo compiling && php ./vendor/bin/rr get --no-interaction --location bin/ && chmod +x bin/rr"
-    ]
-}
