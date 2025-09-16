@@ -23,4 +23,4 @@ else
 fi
 
 echo "-----> Starting Shlink (via RR)..."
-exec ./bin/rr serve -c config/roadrunner/.rr.dev.yml
+exec ./bin/rr serve -c ./.rr.scalingo.yml
