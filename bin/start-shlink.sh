@@ -16,4 +16,4 @@ echo "-----> Installing RR..."
 php ./vendor/bin/rr get --no-interaction --location bin/ && chmod +x bin/rr
 
 echo "-----> Starting Shlink (via RR)..."
-exec ./bin/rr serve -o ${HOST:-0.0.0.0}:${PORT:-8080} -c config/roadrunner/.rr.yml
+exec ./bin/rr serve -c config/roadrunner/.rr.yml
