@@ -23,4 +23,4 @@ else
 fi
 
 echo "-----> Starting Shlink (via RR)..."
-exec ./bin/rr serve -o http.address=0.0.0.0:$PORT -c config/roadrunner/.rr.yml
+exec ./bin/rr serve -c config/roadrunner/.rr.yml -o logs.mode=development -o logs.level=debug
