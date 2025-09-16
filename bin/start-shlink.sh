@@ -12,15 +12,8 @@ set -o pipefail
 # Fail on undeclared variables.
 set -u
 
-echo "-----> Current directory: $(pwd)"
-
-echo "-----> Listing files in /: $(ls -m /)"
-
-echo "-----> Listing files in /build: $(ls -m /build)"
-
-
 echo "-----> Installing RR..."
-php /app/vendor/bin/rr get --no-interaction --location bin/ && chmod +x bin/rr
+php ./vendor/bin/rr get --no-interaction --location bin/ && chmod +x bin/rr
 
-echo "-----> Starting Shlink..."
-exec bin/rr serve -o ${HOST:-0.0.0.0}:${PORT:-8080}
+echo "-----> Starting Shlink (via RR)..."
+exec ./bin/rr serve -o ${HOST:-0.0.0.0}:${PORT:-8080} -c config/roadrunner/.rr.yml
