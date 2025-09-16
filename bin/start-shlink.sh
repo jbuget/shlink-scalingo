@@ -23,4 +23,4 @@ else
 fi
 
 echo "-----> Starting Shlink (via RR)..."
-exec ./bin/rr serve -c config/roadrunner/.rr.yml -o logs.mode=development -o logs.level=debug
+exec ./bin/rr serve -c config/roadrunner/.rr.yml -o logs.mode=development -o logs.channels.server.level=debug
