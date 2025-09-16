@@ -23,4 +23,4 @@ else
 fi
 
 echo "-----> Starting Shlink (via RR)..."
-exec ./bin/rr serve -c config/roadrunner/.rr.yml -o logs.channels.jobs.level=info -o server.command="php -dopcache.enable_cli=1 -dopcache.validate_timestamps=1 ../../bin/roadrunner-worker.php"
+exec ./bin/rr serve -c config/roadrunner/.rr.dev.yml
