@@ -1,2 +1,2 @@
-postdeploy: bash bin/release.sh
 web: php -d variables_order=EGPCS -S 0.0.0.0:$PORT -t public public/index.php
+postdeploy: bash bin/postdeploy.sh
