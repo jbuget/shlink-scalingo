@@ -12,19 +12,8 @@ set -o pipefail
 # Fail on undeclared variables.
 set -u
 
-BUILD_DIR="$1"
-CACHE_DIR="$2"
-ENV_DIR="$3"
-
-# dans votre buildpack (bin/compile)
-if [ -x "$CACHE_DIR/rr" ]; then
-  echo "-----> Reusing cached RR..."
-  cp "$CACHE_DIR/rr" "$BUILD_DIR/bin/rr"
-else
-  echo "-----> Installing RR..."
-  php ./vendor/bin/rr get --no-interaction --location bin/ && chmod +x "$BUILD_DIR/bin/rr"
-  cp "$BUILD_DIR/bin/rr" "$CACHE_DIR/rr"
-fi
+echo "-----> Installing RR..."
+php ./vendor/bin/rr get --no-interaction --location bin/ && chmod +x "./bin/rr"
 
 echo "-----> Assert GeoLite2 database is present..."
 if [[ -n "${GEOLITE_LICENSE_KEY:-}" ]]; then
