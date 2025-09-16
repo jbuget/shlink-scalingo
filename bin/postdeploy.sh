@@ -7,3 +7,4 @@ if [[ -n "${GEOLITE_LICENSE_KEY:-}" ]]; then
 else
     echo "GEOLITE_LICENSE_KEY is not set. Skipping GeoLite2 database download."
 fi
+echo "done"

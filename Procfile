@@ -1,1 +1,1 @@
-web: php -d variables_order=EGPCS -S 0.0.0.0:$PORT -t public public/index.php
+web: bin/web.sh
