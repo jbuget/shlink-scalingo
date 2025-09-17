@@ -30,6 +30,9 @@ rm -f ./data/cache/app_config.php || true
 # 4) Sanity-check : le dossier proxies DOIT exister et être écrit/lu
 php -r 'echo (is_dir("data/proxies") && is_writable("data/proxies")) ? "proxies:OK\n" : "proxies:KO\n";'
 
+echo "-----> Initializing Shlink..."
+php ./vendor/bin/shlink-installer init --no-interaction --clear-db-cache
+
 echo "-----> Installing RR..."
 php ./vendor/bin/rr get --no-interaction --location bin/ && chmod +x "./bin/rr"
 
