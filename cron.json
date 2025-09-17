@@ -1,0 +1,12 @@
+{
+    "jobs": [
+        {
+            "command": "0 * * * * /app/bin/cli visit:locate -q -n",
+            "size": "M"
+        },
+        {
+            "command": "0 0 * * 0 /app/bin/cli visit:download-db -q -n",
+            "size": "M"
+        }
+    ]
+}
